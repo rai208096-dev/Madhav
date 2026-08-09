@@ -237,7 +237,7 @@
         }
 
         /* ================================================================
-                   PREMIUM NAVBAR — COMPLETELY REDESIGNED
+                   PREMIUM NAVBAR
                    ================================================================ */
         .header {
             position: fixed;
@@ -278,40 +278,21 @@
             flex-shrink: 0;
             transition: var(--transition);
         }
-        .logo:hover .logo-icon {
+        .logo:hover .hospital-logo {
             transform: scale(1.03);
         }
         .logo:hover .logo-text .name {
             color: var(--blue);
         }
 
-        .logo-icon {
-            width: 46px;
-            height: 46px;
-            background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 60%, var(--green) 100%);
-            border-radius: var(--radius-sm);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-weight: 800;
-            font-size: 1.15rem;
-            letter-spacing: -0.03em;
+        /* Hospital logo image */
+        .hospital-logo {
+            width: 59px;
+            height: 59px;
+            object-fit: contain;
+            display: block;
             flex-shrink: 0;
-            position: relative;
-            box-shadow: 0 4px 12px rgba(26, 107, 160, 0.20);
-            transition: var(--transition);
-        }
-        .logo-icon::after {
-            content: '';
-            position: absolute;
-            inset: 3px;
-            border: 1.5px solid rgba(255, 255, 255, 0.18);
-            border-radius: 6px;
-            transition: var(--transition);
-        }
-        .logo:hover .logo-icon::after {
-            border-color: rgba(255, 255, 255, 0.35);
+            transition: transform 0.3s ease;
         }
 
         .logo-text {
@@ -337,10 +318,9 @@
             text-transform: uppercase;
         }
 
-        .header.scrolled .logo-icon {
-            width: 40px;
-            height: 40px;
-            font-size: 1rem;
+        .header.scrolled .hospital-logo {
+            width: 44px;
+            height: 44px;
         }
         .header.scrolled .logo-text .name {
             font-size: 0.92rem;
@@ -624,7 +604,7 @@
         }
 
         /* ================================================================
-                   ATTRACTIVE HERO — REDESIGNED
+                   ATTRACTIVE HERO
                    ================================================================ */
         .hero {
             padding: calc(var(--header-height) + 30px) 0 50px;
@@ -636,7 +616,6 @@
             align-items: center;
         }
 
-        /* Animated background shapes */
         .hero::before {
             content: '';
             position: absolute;
@@ -679,7 +658,6 @@
             }
         }
 
-        /* Subtle medical cross pattern overlay */
         .hero-pattern {
             position: absolute;
             inset: 0;
@@ -701,7 +679,6 @@
             align-items: center;
         }
 
-        /* ----- LEFT CONTENT ----- */
         .hero-content {
             position: relative;
             z-index: 2;
@@ -842,7 +819,6 @@
             font-weight: 700;
         }
 
-        /* ----- RIGHT VISUAL ----- */
         .hero-visual {
             position: relative;
             z-index: 2;
@@ -895,7 +871,6 @@
             margin-bottom: 12px;
         }
 
-        /* Floating badge */
         .hero-float-badge {
             position: absolute;
             bottom: -12px;
@@ -937,7 +912,6 @@
             font-size: 0.75rem;
         }
 
-        /* Additional floating element: a small cross */
         .hero-visual .floating-cross {
             position: absolute;
             top: 10%;
@@ -2055,7 +2029,7 @@
         }
 
         /* ================================================================
-                   PREMIUM FOOTER — COMPLETELY REDESIGNED
+                   PREMIUM FOOTER
                    ================================================================ */
         .footer {
             background: var(--navy-dark);
@@ -2108,44 +2082,32 @@
             padding: 56px 0 40px;
         }
 
+        /* Footer logo */
+        .footer-hospital-logo {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+            display: block;
+            flex-shrink: 0;
+        }
+
         .footer-brand .logo {
             display: flex;
             align-items: center;
             gap: 12px;
             margin-bottom: 10px;
         }
-        .footer-brand .logo .logo-icon {
-            width: 44px;
-            height: 44px;
-            background: linear-gradient(135deg, var(--green), var(--blue));
-            border-radius: var(--radius-sm);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--white);
-            font-weight: 800;
-            font-size: 1.05rem;
-            box-shadow: 0 4px 16px rgba(29, 138, 79, 0.20);
-            flex-shrink: 0;
-            position: relative;
-        }
-        .footer-brand .logo .logo-icon::after {
-            content: '';
-            position: absolute;
-            inset: 3px;
-            border: 1.5px solid rgba(255, 255, 255, 0.15);
-            border-radius: 6px;
-        }
-        .footer-brand .logo .logo-text .name {
+
+        .footer-brand .logo-text .name {
             font-weight: 700;
             font-size: 1rem;
             color: var(--white);
             letter-spacing: -0.02em;
         }
-        .footer-brand .logo .logo-text .name span {
+        .footer-brand .logo-text .name span {
             color: var(--green-light);
         }
-        .footer-brand .logo .logo-text .tag {
+        .footer-brand .logo-text .tag {
             font-size: 0.5rem;
             font-weight: 500;
             color: rgba(255, 255, 255, 0.4);
@@ -2184,6 +2146,51 @@
         .footer-brand .trust-badges span i {
             color: var(--green-light);
             font-size: 0.7rem;
+        }
+
+        /* Social Icons - with Instagram & YouTube */
+        .footer-social {
+            display: flex;
+            gap: 10px;
+            margin-top: 16px;
+            flex-wrap: wrap;
+        }
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.6);
+            transition: var(--transition);
+            font-size: 1rem;
+            backdrop-filter: blur(4px);
+        }
+        .footer-social a:hover {
+            background: var(--green);
+            border-color: var(--green);
+            color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(29, 138, 79, 0.25);
+        }
+        .footer-social a:hover .fa-instagram {
+            color: #fff;
+        }
+        .footer-social a:hover .fa-youtube {
+            color: #fff;
+        }
+        /* Instagram brand hover color override */
+        .footer-social a.instagram:hover {
+            background: radial-gradient(circle at 30% 30%, #fdf497, #fdf497 10%, #fd5949 30%, #d6249f 60%, #285aeb 100%);
+            border-color: transparent;
+        }
+        /* YouTube brand hover color override */
+        .footer-social a.youtube:hover {
+            background: #ff0000;
+            border-color: #ff0000;
         }
 
         .footer h4 {
@@ -2314,33 +2321,6 @@
             transform: scale(1.03);
         }
 
-        .footer-social {
-            display: flex;
-            gap: 10px;
-            margin-top: 16px;
-        }
-        .footer-social a {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.06);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: rgba(255, 255, 255, 0.6);
-            transition: var(--transition);
-            font-size: 1rem;
-            backdrop-filter: blur(4px);
-        }
-        .footer-social a:hover {
-            background: var(--green);
-            border-color: var(--green);
-            color: var(--white);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(29, 138, 79, 0.25);
-        }
-
         .footer-bottom {
             border-top: 1px solid rgba(255, 255, 255, 0.06);
             padding: 18px 0;
@@ -2388,6 +2368,14 @@
                 grid-template-columns: 1fr 1fr;
                 gap: 32px;
             }
+            .hospital-logo {
+                width: 46px;
+                height: 46px;
+            }
+            .footer-hospital-logo {
+                width: 60px;
+                height: 60px;
+            }
         }
 
         @media (max-width: 860px) {
@@ -2416,10 +2404,9 @@
             .header.scrolled {
                 height: 62px;
             }
-            .header.scrolled .logo-icon {
-                width: 36px;
-                height: 36px;
-                font-size: 0.9rem;
+            .header.scrolled .hospital-logo {
+                width: 40px;
+                height: 40px;
             }
             .header.scrolled .logo-text .name {
                 font-size: 0.85rem;
@@ -2428,10 +2415,9 @@
                 font-size: 0.42rem;
             }
 
-            .logo-icon {
-                width: 40px;
-                height: 40px;
-                font-size: 1rem;
+            .hospital-logo {
+                width: 42px;
+                height: 42px;
             }
             .logo-text .name {
                 font-size: 0.92rem;
@@ -2580,6 +2566,10 @@
             }
             .footer ul li a {
                 justify-content: center;
+            }
+            .footer-hospital-logo {
+                width: 60px;
+                height: 60px;
             }
         }
 
@@ -2772,6 +2762,15 @@
                 font-size: 0.8rem;
                 padding: 8px 12px;
             }
+            .footer-hospital-logo {
+                width: 50px;
+                height: 50px;
+            }
+            .footer-social a {
+                width: 36px;
+                height: 36px;
+                font-size: 0.9rem;
+            }
         }
 
         @media (max-width: 420px) {
@@ -2800,10 +2799,9 @@
             .logo-text .tag {
                 font-size: 0.42rem;
             }
-            .logo-icon {
+            .hospital-logo {
                 width: 36px;
                 height: 36px;
-                font-size: 0.9rem;
             }
             .header {
                 height: 62px;
@@ -2811,10 +2809,9 @@
             .header.scrolled {
                 height: 56px;
             }
-            .header.scrolled .logo-icon {
+            .header.scrolled .hospital-logo {
                 width: 32px;
                 height: 32px;
-                font-size: 0.8rem;
             }
             .header.scrolled .logo-text .name {
                 font-size: 0.78rem;
@@ -2852,6 +2849,15 @@
             }
             .appointment-phone-cta .left .number {
                 font-size: 1.1rem;
+            }
+            .footer-hospital-logo {
+                width: 44px;
+                height: 44px;
+            }
+            .footer-social a {
+                width: 32px;
+                height: 32px;
+                font-size: 0.8rem;
             }
         }
 
@@ -2917,19 +2923,16 @@
     PREMIUM HEADER / NAVBAR
     ========================================== -->
     <header class="header" id="header" role="banner" aria-label="Main navigation">
-    <div class="container header-inner">
-
-        <!-- Logo -->
-        <a href="#hero" class="logo" aria-label="Madhav Multispeciality Hospital Home">
-            <span class="logo-icon">
-                <img src="image.png" alt="Madhav Multispeciality Hospital Logo">
-            </span>
-
-            <span class="logo-text">
-                <span class="name">MADHAV <span>MULTISPECIALITY</span></span>
-                <span class="tag">HOSPITAL</span>
-            </span>
-        </a>
+        <div class="container header-inner">
+            <!-- Logo with actual hospital logo image -->
+            <a href="#hero" class="logo" aria-label="Madhav Multispeciality Hospital Home">
+                <!-- Replace src with your actual logo file path -->
+                <img src="image.png" alt="Madhav Multispeciality Hospital Logo" class="hospital-logo">
+                <span class="logo-text">
+                    <span class="name">MADHAV <span>MULTISPECIALITY</span></span>
+                    <span class="tag">HOSPITAL</span>
+                </span>
+            </a>
 
             <!-- Desktop Navigation -->
             <nav class="nav" role="navigation" aria-label="Main Navigation">
@@ -2988,7 +2991,7 @@
     </div>
 
     <!-- ================================================================
-    ATTRACTIVE HERO — REDESIGNED
+    ATTRACTIVE HERO
     ================================================================ -->
     <section class="hero" id="hero" aria-labelledby="hero-title">
         <div class="hero-pattern"></div>
@@ -3019,19 +3022,15 @@
 
                 <div class="hero-visual">
                     <div class="img-wrapper">
-                        <!-- Placeholder image -->
                         <div class="placeholder-text">
                             <i class="fas fa-hospital-user"></i>
                             <span>Madhav Multispeciality Hospital</span>
                             <span style="font-size:0.8rem;font-weight:400;opacity:0.6;">CARE • COMPASSION • CURE</span>
                         </div>
-                        <!-- Uncomment when real image is available -->
-                        <!-- <img src="path-to-hospital-image.jpg" alt="Madhav Multispeciality Hospital - Modern healthcare facility" loading="lazy" /> -->
                         <div class="hero-float-badge">
                             <span class="stars">★★★★★</span>
                             <span class="rating-text">4.8 <small>(237+ reviews)</small></span>
                         </div>
-                        <!-- Decorative floating cross -->
                         <div class="floating-cross">
                             <i class="fas fa-plus"></i>
                         </div>
@@ -3687,7 +3686,7 @@
     </section>
 
     <!-- ================================================================
-    PREMIUM FOOTER — COMPLETELY REDESIGNED
+    PREMIUM FOOTER — WITH INSTAGRAM & YOUTUBE
     ================================================================ -->
     <footer class="footer" id="footer" role="contentinfo" aria-label="Site footer">
         <div class="footer-top-border"></div>
@@ -3695,7 +3694,8 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <div class="logo">
-                        <span class="logo-icon">MH</span>
+                        <!-- Replace src with your actual logo file path -->
+                        <img src="image.png" alt="Madhav Multispeciality Hospital Logo" class="footer-hospital-logo">
                         <span class="logo-text">
                             <span class="name">MADHAV <span>HOSPITAL</span></span>
                             <span class="tag">MULTISPECIALITY</span>
@@ -3711,9 +3711,19 @@
                         <span><i class="fas fa-check-circle"></i> Modern Facilities</span>
                         <span><i class="fas fa-check-circle"></i> 24×7 Emergency Care</span>
                     </div>
+
+                    <!-- Social Icons: Facebook, Instagram, YouTube -->
                     <div class="footer-social">
-                        <a href="https://www.facebook.com/hospitalmadhav/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <a href="https://www.facebook.com/hospitalmadhav/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="facebook">
                             <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <!-- Replace # with your actual Instagram URL -->
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <!-- Replace # with your actual YouTube URL -->
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="YouTube" class="youtube">
+                            <i class="fab fa-youtube"></i>
                         </a>
                     </div>
                 </div>
@@ -4035,7 +4045,7 @@
             });
 
             console.log('Madhav Multispeciality Hospital — CARE • COMPASSION • CURE');
-            console.log('Hero section redesigned for better appeal.');
+            console.log('Footer updated with Instagram & YouTube social buttons.');
         })();
     </script>
 
